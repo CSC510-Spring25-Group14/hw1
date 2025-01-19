@@ -1,3 +1,6 @@
+from functools import lru_cache
+
+@lru_cache(maxsize=None)
 def factorial(n):
     if n < 0 and isinstance(n, int):
         raise ValueError("Factorial is defined only for positive integers.")
