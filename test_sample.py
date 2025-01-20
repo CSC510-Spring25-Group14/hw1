@@ -1,3 +1,4 @@
+import pytest
 from myfile import factorial
 
 def test_factorial_1():
@@ -7,4 +8,5 @@ def test_factorial_2():
     assert factorial(6) == 720
 
 def test_factorial_3():
-    assert factorial(-5) == None
+    with pytest.raises(ValueError, match="Factorial is defined only for positive integers."):
+        factorial(-5)
