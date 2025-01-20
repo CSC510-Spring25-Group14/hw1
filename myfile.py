@@ -4,7 +4,6 @@ from functools import lru_cache
 def factorial(n):
     if n < 0 and isinstance(n, int):
         raise ValueError("Factorial is defined only for positive integers.")
-        return
     if not isinstance(n, int):
         raise ValueError("Factorial is defined only for integers (positive specifically).")
     if n == 0 or n == 1:
