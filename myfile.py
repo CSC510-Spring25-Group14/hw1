@@ -6,7 +6,9 @@ def factorial(n):
         raise ValueError("Factorial is defined only for positive integers.")
     if not isinstance(n, int):
         raise ValueError("Factorial is defined only for integers (positive specifically).")
-    if n == 0 or n == 1:
+    if n == 0:
+        return 0
+    if n == 1:
         return 1
     return n * factorial(n - 1)
 
